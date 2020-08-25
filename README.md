@@ -24,7 +24,7 @@ cd
 mkdir catkin_ws
 cd ~/catkin_ws/
 mkdir src
-cv ..
+cd ..
 catkin_make
 ```
 ### Incluir repositorios
@@ -43,12 +43,20 @@ En el archivo .bashrc incluir las siguientes líneas:
 * export TURTLEBOT3_MODEL=burger
 * source /home/"TU_USUARIO"/catkin_ws/devel/setup.bash
 
-## Comprobando la instalación
+## Comprobando la instalación del TurtleBot3
 * En una de las pestañas de la consola lanzar el ros master con la instrucción roscore
 * En otra pestaña lanzar el robot con un mundo gazebo con alguna de las siguientes opciones:
     * roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
-    * roslaunch turtlebot3_gazebo turtlebot3_world.launch 
+    * roslaunch turtlebot3_gazebo turtlebot3_world.launch
 * En otra pestaña lanzar el nodo que conecta con rviz: roslaunch turtlebot3_fake turtlebot3_fake.launch
-* En otra pestaña lanzar el teleop para mover el robot en el entorno de simulación: 
+* En otra pestaña lanzar el teleop para mover el robot en el entorno de simulación:
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
+## ¿Cómo instalar este repo?
+```
+cd
+cd ~/catkin_ws/src
+git clone https://github.com/HaroldMurcia/TurtleBot3_test.git
+cd ..
+catkin_make
+```
